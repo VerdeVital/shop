@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <style>
+        .banner-ofertes {
+            background: linear-gradient(135deg, var(--verd-vital) 0%, var(--ocre) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comptador-oferta {
+            font-size: 3rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .comptador-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+        }
+
+        .grid-ofertes {
+            max-width: 1280px;
+            margin: 4rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            padding: 0 2rem;
+        }
+
+        .targeta-oferta {
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .targeta-oferta:hover {
+            transform: scale(1.02);
+        }
+
+        .badge-oferta {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #e63946;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+        }
+
+        .imatge-oferta {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .detalls-oferta {
+            padding: 1.5rem;
+        }
+
+        .preu-oferta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .preu-nou {
+            font-size: 1.5rem;
+            color: var(--ocre);
+            font-weight: 700;
+        }
+
+        .preu-original {
+            text-decoration: line-through;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <section class="banner-ofertes">
+        <h2>🔥 Ofertes Especials 🔥</h2>
+        <p>Aprofita els descomptes exclusius fins al 31 d'agost</p>
+        <div class="comptador-oferta">
+            <div class="comptador-item">
+                <div>03</div>
+                <small>Dies</small>
+            </div>
+            <div class="comptador-item">
+                <div>12</div>
+                <small>Hores</small>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid-ofertes">
+        <article class="targeta-oferta">
+            <span class="badge-oferta">50% OFF</span>
+            <img src="oferta1.jpg" class="imatge-oferta" alt="Oferta">
+            <div class="detalls-oferta">
+                <h3>Pack Iniciació Urban Jungle</h3>
+                <p>3 plantes d'interior + testador nutrients</p>
+                <div class="preu-oferta">
+                    <span class="preu-nou">49,95 €</span>
+                    <span class="preu-original">99,95 €</span>
+                </div>
+                <button class="boto-comprar">Afegeix ara 🪴</button>
+            </div>
+        </article>
+
+        <!-- Més ofertes -->
+    </div>
+</body>
+</html>

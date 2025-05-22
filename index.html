@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Vital | Plantes amb ànima</title>
+    <style>
+        :root {
+            --verd-vital: #2A5D5A;
+            --ocre: #D4A373;
+            --crema: #FAEDCD;
+            --terra: #7A4F2D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--crema);
+            color: var(--verd-vital);
+            line-height: 1.6;
+        }
+
+        .header-vibrant {
+            background: var(--verd-vital);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--ocre);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-marca {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-marca img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-text {
+            color: var(--crema);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .menu-principal {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .menu-principal a {
+            color: var(--crema);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .menu-principal a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--ocre);
+            transition: width 0.3s ease;
+        }
+
+        .menu-principal a:hover::before {
+            width: 100%;
+        }
+
+        .hero-dynamic {
+            height: 80vh;
+            background: radial-gradient(circle at center, 
+                      rgba(42,93,90,0.9) 0%, 
+                      rgba(42,93,90,0.7) 100%),
+                      url('https://images.unsplash.com/photo-1591958915259-d2cfd1e09b88') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--crema);
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .titol-hero {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .grid-serveis {
+            max-width: 1280px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .servei-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            transition: transform 0.4s;
+        }
+
+        .servei-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icona-servei {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--ocre);
+        }
+
+        .cta-section {
+            background: var(--verd-vital);
+            color: var(--crema);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .boto-cta {
+            background: var(--ocre);
+            color: var(--verd-vital);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .boto-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background: var(--terra);
+            color: var(--crema);
+            padding: 3rem 2rem;
+        }
+
+        .secret-natura {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .secret-natura a {
+            color: rgba(250,237,205,0.3);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .secret-natura a:hover {
+            color: var(--ocre);
+        }
+
+        @media (max-width: 768px) {
+            .titol-hero {
+                font-size: 2.5rem;
+            }
+            
+            .menu-principal {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-vibrant">
+        <nav class="nav-container">
+            <div class="logo-marca">
+                <img src="logo-verde-vital.svg" alt="Logo Verde Vital">
+                <span class="logo-text">VERDE VITAL</span>
+            </div>
+            <div class="menu-principal">
+                <a href="index.html">Inici</a>
+                <a href="botiga.html">Botiga</a>
+                <a href="ofertes.html">Cura de plantes</a>
+                <a href="contacte.html">Contacte</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-dynamic">
+        <div class="hero-content">
+            <h1 class="titol-hero">Respira natura des de 1999</h1>
+            <p>25 anys portant vida als vostres espais</p>
+        </div>
+    </section>
+
+    <section class="grid-serveis">
+        <article class="servei-card">
+            <div class="icona-servei">🌿</div>
+            <h3>Assessorament Personalitzat</h3>
+            <p>Els nostres experts us ajudaran a triar la planta perfecte per al vostre espai</p>
+        </article>
+
+        <article class="servei-card">
+            <div class="icona-servei">💧</div>
+            <h3>Subscripció de Riego</h3>
+            <p>Mai més us oblidareu de regar les plantes amb el nostre sistema intel·ligent</p>
+        </article>
+    </section>
+
+    <section class="cta-section">
+        <h2>Descobreix el nostre hivernacle sostenible</h2>
+        <button class="boto-cta">Visita Virtual</button>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>📍 C/ dels Tarongers 15, Girona</p>
+            <p>📞 972 123 456</p>
+            <p>✉️ arrels@verdevital.cat</p>
+            <div class="secret-natura">
+                <a href="eco-secrets.html">El secret del creixement</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

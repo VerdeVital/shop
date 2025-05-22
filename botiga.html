@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Botiga - Verde Vital</title>
+    <style>
+        .filtres-botiga {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .selector-categoria {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            flex: 1 1 250px;
+        }
+
+        .categoria-titol {
+            color: var(--verd-vital);
+            margin-bottom: 1rem;
+        }
+
+        .llista-categories {
+            list-style: none;
+        }
+
+        .categoria-item {
+            margin: 0.8rem 0;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .categoria-item:hover {
+            color: var(--ocre);
+        }
+
+        .categoria-item::before {
+            content: '🌱';
+            font-size: 0.8em;
+        }
+
+        .grid-productes {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .producte-card {
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .producte-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .etiqueta-oferta {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--ocre);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-weight: 600;
+        }
+
+        .producte-imatge {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--crema);
+        }
+
+        .producte-info {
+            padding: 1.5rem;
+        }
+
+        .preu-producte {
+            font-size: 1.4rem;
+            color: var(--verd-vital);
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .preu-anterior {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .cerca-productes {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .cerca-input {
+            width: 100%;
+            padding: 1rem 2rem;
+            border: 2px solid var(--crema);
+            border-radius: 2rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-vibrant">
+        <!-- Capçalera consistent -->
+    </header>
+
+    <div class="cerca-productes">
+        <input type="text" class="cerca-input" placeholder="🔍 Cerca plantes...">
+    </div>
+
+    <div class="filtres-botiga">
+        <aside class="selector-categoria">
+            <h3 class="categoria-titol">Categories</h3>
+            <ul class="llista-categories">
+                <li class="categoria-item">Plantes d'interior</li>
+                <li class="categoria-item">Suculentes</li>
+                <li class="categoria-item">Arbres bonsái</li>
+                <li class="categoria-item">Plantes aromàtiques</li>
+                <li class="categoria-item">Orquídies</li>
+            </ul>
+        </aside>
+
+        <section class="grid-productes">
+            <article class="producte-card">
+                <span class="etiqueta-oferta">-20%</span>
+                <img src="planta1.jpg" class="producte-imatge" alt="Monstera">
+                <div class="producte-info">
+                    <h3>Monstera Deliciosa</h3>
+                    <p>Planta tropical de fulles decoratives</p>
+                    <div class="preu-producte">
+                        <span>19,95 €</span>
+                        <span class="preu-anterior">24,95 €</span>
+                    </div>
+                    <button class="boto-comprar">Afegeix a la cistella 🛒</button>
+                </div>
+            </article>
+
+            <!-- Afegir més productes -->
+        </section>
+    </div>
+
+    <!-- Peu de pàgina consistent -->
+</body>
+</html>

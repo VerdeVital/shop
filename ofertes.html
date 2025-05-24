@@ -1,7 +1,40 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertes - Verde Vital</title>
     <style>
+        :root {
+            --verd-vital: #2A5D5A;
+            --ocre: #D4A373;
+            --crema: #FAEDCD;
+            --terra: #7A4F2D;
+        }
+
+        /* Estils generals */
+        body {
+            margin: 0;
+            background: var(--crema);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        /* Capçalera */
+        .header-vibrant {
+            background: var(--verd-vital);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--ocre);
+        }
+
+        /* Contingut principal */
+        main {
+            padding: 2rem;
+        }
+
+        /* Estils específics d'ofertes */
         .banner-ofertes {
             background: linear-gradient(135deg, var(--verd-vital) 0%, var(--ocre) 100%);
             color: white;
@@ -17,12 +50,14 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .comptador-item {
             background: rgba(255,255,255,0.1);
             padding: 1rem 2rem;
             border-radius: 1rem;
+            min-width: 120px;
         }
 
         .grid-ofertes {
@@ -41,6 +76,8 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             position: relative;
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .targeta-oferta:hover {
@@ -56,16 +93,19 @@
             padding: 0.5rem 1rem;
             border-radius: 2rem;
             font-weight: 600;
+            z-index: 1;
         }
 
         .imatge-oferta {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
+            border-bottom: 3px solid var(--crema);
         }
 
         .detalls-oferta {
             padding: 1.5rem;
+            flex-grow: 1;
         }
 
         .preu-oferta {
@@ -85,9 +125,39 @@
             text-decoration: line-through;
             color: #666;
         }
+
+        .boto-comprar {
+            background: var(--verd-vital);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .boto-comprar:hover {
+            background: var(--ocre);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
+     <header class="header-vibrant">
+        <nav class="nav-container">
+            <div class="logo-marca">
+                <img src="logo-verde-vital.svg" alt="Logo Verde Vital">
+                <span class="logo-text">VERDE VITAL</span>
+            </div>
+            <div class="menu-principal">
+                <a href="index.html">Inici</a>
+                <a href="ofertes.html">Ofertes</a
+            </div>
+        </nav>
+    </header>
+
     <section class="banner-ofertes">
         <h2>🔥 Ofertes Especials 🔥</h2>
         <p>Aprofita els descomptes exclusius fins al 31 d'agost</p>
@@ -103,22 +173,43 @@
         </div>
     </section>
 
-    <div class="grid-ofertes">
-        <article class="targeta-oferta">
-            <span class="badge-oferta">50% OFF</span>
-            <img src="oferta1.jpg" class="imatge-oferta" alt="Oferta">
-            <div class="detalls-oferta">
-                <h3>Pack Iniciació Urban Jungle</h3>
-                <p>3 plantes d'interior + testador nutrients</p>
-                <div class="preu-oferta">
-                    <span class="preu-nou">49,95 €</span>
-                    <span class="preu-original">99,95 €</span>
+    <main>
+        <div class="grid-ofertes">
+            <article class="targeta-oferta">
+                <span class="badge-oferta">50% OFF</span>
+                <img src="https://images.unsplash.com/photo-1586999768265-24af89630739" class="imatge-oferta" alt="Pack Urban Jungle">
+                <div class="detalls-oferta">
+                    <h3>Pack Al·lucinògen PRO</h3>
+                    <p>300g Maria + 150g Coca + 250 Heroina</p>
+                    <div class="preu-oferta">
+                        <span class="preu-nou">49,95 €</span>
+                        <span class="preu-original">99,95 €</span>
+                    </div>
+                    <button class="boto-comprar">RECLAMAR OFERTA 🪴</button>
                 </div>
-                <button class="boto-comprar">Afegeix ara 🪴</button>
-            </div>
-        </article>
+            </article>
 
-        <!-- Més ofertes -->
-    </div>
+            <article class="targeta-oferta">
+                <span class="badge-oferta">30% OFF</span>
+                <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411" class="imatge-oferta" alt="Orquídies">
+                <div class="detalls-oferta">
+                    <h3>MARIA A FULL</h3>
+                    <p>Maria amb mes maria (1kg)</p>
+                    <div class="preu-oferta">
+                        <span class="preu-nou">34,95 €</span>
+                        <span class="preu-original">49,95 €</span>
+                    </div>
+                    <button class="boto-comprar">Reclamar Oferta</button>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>📍 C/ dels Tarongers 15, Girona</p>
+            <p>📞 972 123 456</p>
+            <p>✉️ arrels@verdevital.cat</p>
+        </div>
+    </footer>
 </body>
 </html>

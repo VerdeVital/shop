@@ -13,6 +13,70 @@
             --terra: #7A4F2D;
         }
 
+           .header-vibrant {
+            background: var(--verd-vital);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--ocre);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-marca {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-marca img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-text {
+            color: var(--crema);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .menu-principal {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .menu-principal a {
+            color: var(--crema);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .menu-principal a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--ocre);
+            transition: width 0.3s ease;
+        }
+
+        .menu-principal a:hover::before {
+            width: 100%;
+        }
+
+
         /* Estils generals */
         body {
             margin: 0;
